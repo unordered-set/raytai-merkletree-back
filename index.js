@@ -14,6 +14,8 @@ const AL_MERKLE_TREE = new MerkleTree(AL.map(address => doHash(address)), keccak
 // For faster lookups
 const AL_LOOKUP = new Map(AL.map(v => [v, true]))
 
+console.log("Merkle root is:", AL_MERKLE_TREE.getHexRoot())
+
 /**
  * Responds to any HTTP request.
  *
